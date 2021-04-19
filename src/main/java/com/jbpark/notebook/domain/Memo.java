@@ -10,6 +10,15 @@ public class Memo implements Serializable {
 	private int seqNo;
 	private String content;
 	
+	public Memo() {
+		super();
+	}
+
+	public Memo(int seqNo, String content) {
+		this.seqNo = seqNo;
+		this.content = content;
+	}
+	
 	public int getSeqNo() {
 		return seqNo;
 	}

@@ -13,6 +13,16 @@ textarea {
 	vertical-align: top;
 }
 </style>
+<style>
+table, td, th {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.table {
+	
+}
+</style>
 </head>
 <body>
 	<h1>${ownerName}노트</h1>
@@ -22,6 +32,23 @@ textarea {
 			<label for="memoContent">메모 : </label>
 			<form:textarea id="memoContent" path="content" rows="3" cols="50" />
 			<input type="submit" id="btnAdd" value="저장" />
+		</div>
+		<hr>
+		<div>
+			<table>
+				<tr>
+					<th>번호</th>
+					<th>내용</th>
+					<th>연산1</th>
+				</tr>
+				<c:forEach items="${memo_list}" var="a_memo">
+					<tr>
+						<td>${a_memo.seqNo}</td>
+						<td>${a_memo.content}</td>
+						<td><button type="button">삭제</button></td>
+					</tr>
+				</c:forEach>
+			</table>
 		</div>
 	</form:form>
 </body>

@@ -1,5 +1,7 @@
 package com.jbpark.notebook.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,5 +17,10 @@ public class MemoServiceImpl implements MemoService {
 	@Override
 	public void addMemo(Memo memo) {
 		mariaMemoRepository.addMemo(memo);
+	}
+
+	@Override
+	public List<Memo> getMemoLines(int maxMemos) {
+		return mariaMemoRepository.getMemoLines(maxMemos);
 	}
 }
