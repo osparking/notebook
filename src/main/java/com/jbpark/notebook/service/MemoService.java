@@ -13,4 +13,6 @@ public interface MemoService {
 	 * @return
 	 */
 	List<Memo> getMemoLines(int maxMemos);
+
+	int deleteMemo(int seqNo);
 }

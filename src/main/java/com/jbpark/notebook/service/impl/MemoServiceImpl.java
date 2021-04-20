@@ -23,4 +23,9 @@ public class MemoServiceImpl implements MemoService {
 	public List<Memo> getMemoLines(int maxMemos) {
 		return mariaMemoRepository.getMemoLines(maxMemos);
 	}
+
+	@Override
+	public int deleteMemo(int seqNo) {
+		return mariaMemoRepository.deleteMemo(seqNo);
+	}
 }

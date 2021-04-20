@@ -42,6 +42,13 @@ public class MariaMemoRepository implements MemoRepository {
 		return memoLines;
 	}
 	// @formatter:on
+
+	public int deleteMemo(int seqNo) {
+		String SQL = "delete from memo where seqNo = :seqNo";
+		Map<String, Object> paramMap = new HashMap<String, Object>();
+		paramMap.put("seqNo", seqNo);
+		return jdbcTemplate.update(SQL, paramMap);
+	}
 }
 
 class MemoRowMapper implements RowMapper<Memo> {
