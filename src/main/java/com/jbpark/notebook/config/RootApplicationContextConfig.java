@@ -16,7 +16,7 @@ public class RootApplicationContextConfig {
 		DriverManagerDataSource ds = new DriverManagerDataSource();
 		ds.setDriverClassName(org.mariadb.jdbc.Driver.class.getName());
 		ds.setUrl("jdbc:mariadb://localhost:3306/notebook");
-		ds.setUsername("tester");
+		ds.setUsername("myself");
 		ds.setPassword("1234");
 		return ds;
 	}
