@@ -25,8 +25,7 @@ public class MariaMemoRepository implements MemoRepository {
 		String SQL = "INSERT INTO memo (content) " + "values (:content)";
 		Map<String, Object> params = new HashMap<String, Object>();
 		params.put("content", memo.getContent());
-		int result = jdbcTemplate.update(SQL, params);
-		System.out.println(result);
+		jdbcTemplate.update(SQL, params);
 	}
 
 	// @formatter:off

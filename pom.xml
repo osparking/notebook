@@ -14,6 +14,7 @@
 				<version>2.6</version>
 				<configuration>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
+					<port>5000</port>
 				</configuration>
 			</plugin>
 		</plugins>
